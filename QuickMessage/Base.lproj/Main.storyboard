@@ -255,7 +255,13 @@
                             <constraint firstItem="RLj-jW-F2e" firstAttribute="trailing" secondItem="GZp-js-0fZ" secondAttribute="trailing" id="ovv-F4-BWK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xMb-2Z-c6B"/>
+                    <navigationItem key="navigationItem" id="xMb-2Z-c6B">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="G2P-67-7S2">
+                            <connections>
+                                <action selector="logOutPressed:" destination="Cai-Rp-Hr2" id="I3e-gg-lL3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="cEn-Pa-nqR" id="e2J-VK-UEE"/>
                         <outlet property="tableView" destination="RLj-jW-F2e" id="Vqj-Q0-brr"/>
