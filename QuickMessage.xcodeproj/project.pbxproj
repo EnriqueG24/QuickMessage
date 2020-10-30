@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1829456305548385BCC8C2DE /* Pods_QuickMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F51AB91C992B9E7A818402D /* Pods_QuickMessage.framework */; };
 		5CA1FBD8254B6A3D00D4C89F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1FBD7254B6A3D00D4C89F /* AppDelegate.swift */; };
 		5CA1FBDA254B6A3D00D4C89F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1FBD9254B6A3D00D4C89F /* SceneDelegate.swift */; };
 		5CA1FBDF254B6A3D00D4C89F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA1FBDD254B6A3D00D4C89F /* Main.storyboard */; };
@@ -16,9 +17,13 @@
 		5CA1FBF5254B738D00D4C89F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1FBF4254B738D00D4C89F /* LoginViewController.swift */; };
 		5CA1FBF8254B739400D4C89F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1FBF7254B739400D4C89F /* RegisterViewController.swift */; };
 		5CA1FBFB254B852E00D4C89F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1FBFA254B852E00D4C89F /* ChatViewController.swift */; };
+		5CA1FBFE254BDA5B00D4C89F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CA1FBFD254BDA5B00D4C89F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07607A8E53D5CBAB63A37A6E /* Pods-QuickMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMessage.release.xcconfig"; path = "Target Support Files/Pods-QuickMessage/Pods-QuickMessage.release.xcconfig"; sourceTree = "<group>"; };
+		0F51AB91C992B9E7A818402D /* Pods_QuickMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		195318EFB3941711E15872F6 /* Pods-QuickMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMessage.debug.xcconfig"; path = "Target Support Files/Pods-QuickMessage/Pods-QuickMessage.debug.xcconfig"; sourceTree = "<group>"; };
 		5CA1FBD4254B6A3D00D4C89F /* QuickMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA1FBD7254B6A3D00D4C89F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CA1FBD9254B6A3D00D4C89F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		5CA1FBF4254B738D00D4C89F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5CA1FBF7254B739400D4C89F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5CA1FBFA254B852E00D4C89F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5CA1FBFD254BDA5B00D4C89F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1829456305548385BCC8C2DE /* Pods_QuickMessage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FBFAC207D8659B95A28BCC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F51AB91C992B9E7A818402D /* Pods_QuickMessage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5CA1FBCB254B6A3D00D4C89F = {
 			isa = PBXGroup;
 			children = (
 				5CA1FBD6254B6A3D00D4C89F /* QuickMessage */,
 				5CA1FBD5254B6A3D00D4C89F /* Products */,
+				C667D33222E084631CA7349D /* Pods */,
+				4FBFAC207D8659B95A28BCC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +86,7 @@
 				5CA1FBE0254B6A3E00D4C89F /* Assets.xcassets */,
 				5CA1FBE2254B6A3E00D4C89F /* LaunchScreen.storyboard */,
 				5CA1FBE5254B6A3E00D4C89F /* Info.plist */,
+				5CA1FBFD254BDA5B00D4C89F /* GoogleService-Info.plist */,
 			);
 			path = QuickMessage;
 			sourceTree = "<group>";
@@ -84,6 +102,16 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		C667D33222E084631CA7349D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				195318EFB3941711E15872F6 /* Pods-QuickMessage.debug.xcconfig */,
+				07607A8E53D5CBAB63A37A6E /* Pods-QuickMessage.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CA1FBE8254B6A3E00D4C89F /* Build configuration list for PBXNativeTarget "QuickMessage" */;
 			buildPhases = (
+				92908E9E1804E9EF1F3638F3 /* [CP] Check Pods Manifest.lock */,
 				5CA1FBD0254B6A3D00D4C89F /* Sources */,
 				5CA1FBD1254B6A3D00D4C89F /* Frameworks */,
 				5CA1FBD2254B6A3D00D4C89F /* Resources */,
+				0774E88D57D36DD4B06B524F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,12 +172,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA1FBE4254B6A3E00D4C89F /* LaunchScreen.storyboard in Resources */,
+				5CA1FBFE254BDA5B00D4C89F /* GoogleService-Info.plist in Resources */,
 				5CA1FBE1254B6A3E00D4C89F /* Assets.xcassets in Resources */,
 				5CA1FBDF254B6A3D00D4C89F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0774E88D57D36DD4B06B524F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickMessage/Pods-QuickMessage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickMessage/Pods-QuickMessage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickMessage/Pods-QuickMessage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92908E9E1804E9EF1F3638F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickMessage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CA1FBD0254B6A3D00D4C89F /* Sources */ = {
@@ -303,6 +376,7 @@
 		};
 		5CA1FBE9254B6A3E00D4C89F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195318EFB3941711E15872F6 /* Pods-QuickMessage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +396,7 @@
 		};
 		5CA1FBEA254B6A3E00D4C89F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07607A8E53D5CBAB63A37A6E /* Pods-QuickMessage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,6 @@
+framework module Pods_QuickMessage {
+  umbrella header "Pods-QuickMessage-umbrella.h"
+
+  export *
+  module * { export * }
+}
