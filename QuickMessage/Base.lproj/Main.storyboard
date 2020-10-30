@@ -94,14 +94,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8a-yo-bUX">
-                                <rect key="frame" x="154" y="301" width="107" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="HG3-ea-BRS"/>
-                                </constraints>
+                                <rect key="frame" x="43" y="301" width="329" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="Dk2-eF-2KE" eventType="touchUpInside" id="3ma-Wg-Wda"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-bG-QXN">
                                 <rect key="frame" x="43" y="241" width="329" height="40"/>
@@ -110,25 +110,27 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="eZR-nH-zEW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QEp-k7-Jvi"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="U8a-yo-bUX" firstAttribute="leading" secondItem="QEp-k7-Jvi" secondAttribute="leading" constant="43" id="211-pD-AD5"/>
                             <constraint firstItem="X5X-0v-f5K" firstAttribute="top" secondItem="QEp-k7-Jvi" secondAttribute="top" constant="93" id="9RY-U5-pMc"/>
-                            <constraint firstItem="QEp-k7-Jvi" firstAttribute="trailing" secondItem="U8a-yo-bUX" secondAttribute="trailing" constant="153" id="Mw2-ur-isz"/>
-                            <constraint firstItem="U8a-yo-bUX" firstAttribute="leading" secondItem="QEp-k7-Jvi" secondAttribute="leading" constant="154" id="NjG-NS-V0G"/>
+                            <constraint firstItem="QEp-k7-Jvi" firstAttribute="trailing" secondItem="U8a-yo-bUX" secondAttribute="trailing" constant="42" id="Qos-5x-MWg"/>
                             <constraint firstItem="QEp-k7-Jvi" firstAttribute="trailing" secondItem="X5X-0v-f5K" secondAttribute="trailing" constant="42" id="ZTb-rh-49s"/>
                             <constraint firstItem="sfL-bG-QXN" firstAttribute="leading" secondItem="QEp-k7-Jvi" secondAttribute="leading" constant="43" id="eXf-TR-qUO"/>
                             <constraint firstItem="X5X-0v-f5K" firstAttribute="leading" secondItem="QEp-k7-Jvi" secondAttribute="leading" constant="43" id="gW1-0n-0GP"/>
-                            <constraint firstItem="U8a-yo-bUX" firstAttribute="top" secondItem="sfL-bG-QXN" secondAttribute="bottom" constant="20" id="kVE-5M-K4w"/>
+                            <constraint firstItem="U8a-yo-bUX" firstAttribute="top" secondItem="sfL-bG-QXN" secondAttribute="bottom" constant="20" id="mwj-iM-Wrb"/>
                             <constraint firstItem="sfL-bG-QXN" firstAttribute="top" secondItem="X5X-0v-f5K" secondAttribute="bottom" constant="20" id="oeC-1S-urO"/>
                             <constraint firstItem="QEp-k7-Jvi" firstAttribute="trailing" secondItem="sfL-bG-QXN" secondAttribute="trailing" constant="42" id="zca-M0-3kG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d5P-jF-l6r"/>
                     <connections>
+                        <outlet property="emailTextField" destination="X5X-0v-f5K" id="TTu-zc-IZq"/>
+                        <outlet property="passwordTextField" destination="sfL-bG-QXN" id="Ava-X5-9M2"/>
                         <segue destination="Cai-Rp-Hr2" kind="show" identifier="RegisterToChat" id="w7w-KU-65S"/>
                     </connections>
                 </viewController>
@@ -158,7 +160,7 @@
                                     <constraint firstAttribute="height" constant="40" id="EsA-tb-lak"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZQ-aV-dla">
                                 <rect key="frame" x="168" y="299" width="79" height="48"/>
@@ -278,7 +280,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s8h-hl-cW0"/>
+        <segue reference="w7w-KU-65S"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
