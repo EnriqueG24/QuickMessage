@@ -163,29 +163,34 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZQ-aV-dla">
-                                <rect key="frame" x="168" y="299" width="79" height="48"/>
+                                <rect key="frame" x="43" y="299" width="329" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="OyD-gx-acD" eventType="touchUpInside" id="da5-RB-hWb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yp0-Ih-44e"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="QZQ-aV-dla" firstAttribute="top" secondItem="73a-g9-GOf" secondAttribute="bottom" constant="18" id="Pgw-IJ-wKX"/>
+                            <constraint firstItem="Yp0-Ih-44e" firstAttribute="trailing" secondItem="QZQ-aV-dla" secondAttribute="trailing" constant="42" id="CqT-p2-q4c"/>
                             <constraint firstItem="Yp0-Ih-44e" firstAttribute="trailing" secondItem="2UU-Wk-q80" secondAttribute="trailing" constant="42" id="ZHa-hC-jcj"/>
-                            <constraint firstItem="Yp0-Ih-44e" firstAttribute="trailing" secondItem="QZQ-aV-dla" secondAttribute="trailing" constant="167" id="bjl-zl-Qj8"/>
+                            <constraint firstItem="QZQ-aV-dla" firstAttribute="leading" secondItem="Yp0-Ih-44e" secondAttribute="leading" constant="43" id="dVZ-f0-wsh"/>
                             <constraint firstItem="73a-g9-GOf" firstAttribute="top" secondItem="2UU-Wk-q80" secondAttribute="bottom" constant="20" id="gwI-iX-Hgp"/>
                             <constraint firstItem="73a-g9-GOf" firstAttribute="leading" secondItem="Yp0-Ih-44e" secondAttribute="leading" constant="43" id="jCD-Lh-o5l"/>
                             <constraint firstItem="2UU-Wk-q80" firstAttribute="top" secondItem="Yp0-Ih-44e" secondAttribute="top" constant="93" id="k6X-ly-h79"/>
+                            <constraint firstItem="QZQ-aV-dla" firstAttribute="top" secondItem="73a-g9-GOf" secondAttribute="bottom" constant="18" id="n5G-It-u0t"/>
                             <constraint firstItem="Yp0-Ih-44e" firstAttribute="trailing" secondItem="73a-g9-GOf" secondAttribute="trailing" constant="42" id="nw4-Gs-1e6"/>
                             <constraint firstItem="2UU-Wk-q80" firstAttribute="leading" secondItem="Yp0-Ih-44e" secondAttribute="leading" constant="43" id="soA-2S-jG9"/>
-                            <constraint firstItem="QZQ-aV-dla" firstAttribute="leading" secondItem="Yp0-Ih-44e" secondAttribute="leading" constant="168" id="tPF-eC-c1l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aKP-sS-C3Z"/>
                     <connections>
+                        <outlet property="emailTextField" destination="2UU-Wk-q80" id="Wzz-Ov-FsF"/>
+                        <outlet property="passwordTextField" destination="73a-g9-GOf" id="Uev-sE-5dn"/>
                         <segue destination="Cai-Rp-Hr2" kind="show" identifier="LoginToChat" id="s8h-hl-cW0"/>
                     </connections>
                 </viewController>
@@ -280,7 +285,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w7w-KU-65S"/>
+        <segue reference="s8h-hl-cW0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
