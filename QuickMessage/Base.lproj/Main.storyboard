@@ -45,8 +45,8 @@
                                     <segue destination="OyD-gx-acD" kind="show" id="BaL-TP-zKn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️Quick Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sX-id-RIA">
-                                <rect key="frame" x="40.5" y="425" width="333.5" height="46.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️QuickMessage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sX-id-RIA">
+                                <rect key="frame" x="45.5" y="425" width="323.5" height="46.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46.5" id="QL4-fY-xE2"/>
                                 </constraints>
@@ -69,6 +69,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="noN-Wz-74r"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="3sX-id-RIA" id="NSe-Oh-9Ue"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,7 +129,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="d5P-jF-l6r"/>
                     <connections>
-                        <segue destination="Cai-Rp-Hr2" kind="show" id="w7w-KU-65S"/>
+                        <segue destination="Cai-Rp-Hr2" kind="show" identifier="RegisterToChat" id="w7w-KU-65S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXB-4d-zBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -181,7 +184,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aKP-sS-C3Z"/>
                     <connections>
-                        <segue destination="Cai-Rp-Hr2" kind="show" id="s8h-hl-cW0"/>
+                        <segue destination="Cai-Rp-Hr2" kind="show" identifier="LoginToChat" id="s8h-hl-cW0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tz8-hk-a9V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
