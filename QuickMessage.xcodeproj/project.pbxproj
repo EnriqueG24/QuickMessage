@@ -19,6 +19,7 @@
 		5CA1FBFB254B852E00D4C89F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1FBFA254B852E00D4C89F /* ChatViewController.swift */; };
 		5CA1FBFE254BDA5B00D4C89F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CA1FBFD254BDA5B00D4C89F /* GoogleService-Info.plist */; };
 		5CA1FC15254D14E600D4C89F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1FC14254D14E600D4C89F /* Constants.swift */; };
+		5CFCBBAE254E0CA4000A269C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFCBBAD254E0CA4000A269C /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5CA1FBFA254B852E00D4C89F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		5CA1FBFD254BDA5B00D4C89F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CA1FC14254D14E600D4C89F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5CFCBBAD254E0CA4000A269C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				5CA1FBD7254B6A3D00D4C89F /* AppDelegate.swift */,
 				5CA1FBD9254B6A3D00D4C89F /* SceneDelegate.swift */,
 				5CA1FBDD254B6A3D00D4C89F /* Main.storyboard */,
+				5CFCBBAD254E0CA4000A269C /* Message.swift */,
 				5CA1FBF2254B738100D4C89F /* Controllers */,
 				5CA1FBE0254B6A3E00D4C89F /* Assets.xcassets */,
 				5CA1FBE2254B6A3E00D4C89F /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 				5CA1FBF0254B6B6000D4C89F /* WelcomeViewController.swift in Sources */,
 				5CA1FBD8254B6A3D00D4C89F /* AppDelegate.swift in Sources */,
 				5CA1FC15254D14E600D4C89F /* Constants.swift in Sources */,
+				5CFCBBAE254E0CA4000A269C /* Message.swift in Sources */,
 				5CA1FBFB254B852E00D4C89F /* ChatViewController.swift in Sources */,
 				5CA1FBDA254B6A3D00D4C89F /* SceneDelegate.swift in Sources */,
 			);
