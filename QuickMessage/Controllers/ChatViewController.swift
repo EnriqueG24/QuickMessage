@@ -30,7 +30,7 @@ class ChatViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "⚡️QuickMessage"
+        title = Constants.appName
         navigationItem.hidesBackButton = true
     }
 }
