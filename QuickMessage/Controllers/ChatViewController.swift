@@ -11,11 +11,7 @@ import Firebase
 class ChatViewController: UIViewController {
     
     // MARK: - Properties
-    var messages: [Message] = [
-        Message(sender: "1@2.com", body: "Hello!"),
-        Message(sender: "a@b.com", body: "Hey there!"),
-        Message(sender: "1@2.com", body: "What's going on?")
-    ]
+    var messages: [Message] = []
     let db = Firestore.firestore()
     
     // MARK: - IBOutlets
@@ -52,6 +48,32 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        loadMessages()
+    }
+    
+    // MARK: - Methods
+    func loadMessages() {
+        messages = []
+        db.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+            if error != nil {
+                print(error)
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let sender = data[Constants.FStore.senderField] as? String, let messageBody = data[Constants.FStore.bodyField] as? String {
+                            let newMessage = Message(sender: sender, body: messageBody)
+                            self.messages.append(newMessage)
+                            
+                            // This ensures our tableView is updated on the main thread
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
