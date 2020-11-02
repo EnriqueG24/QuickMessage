@@ -96,9 +96,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8a-yo-bUX">
                                 <rect key="frame" x="43" y="301" width="329" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerPressed:" destination="Dk2-eF-2KE" eventType="touchUpInside" id="3ma-Wg-Wda"/>
                                 </connections>
@@ -114,7 +112,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QEp-k7-Jvi"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="U8a-yo-bUX" firstAttribute="leading" secondItem="QEp-k7-Jvi" secondAttribute="leading" constant="43" id="211-pD-AD5"/>
                             <constraint firstItem="X5X-0v-f5K" firstAttribute="top" secondItem="QEp-k7-Jvi" secondAttribute="top" constant="93" id="9RY-U5-pMc"/>
@@ -165,16 +163,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZQ-aV-dla">
                                 <rect key="frame" x="43" y="299" width="329" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="loginPressed:" destination="OyD-gx-acD" eventType="touchUpInside" id="da5-RB-hWb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yp0-Ih-44e"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Yp0-Ih-44e" firstAttribute="trailing" secondItem="QZQ-aV-dla" secondAttribute="trailing" constant="42" id="CqT-p2-q4c"/>
                             <constraint firstItem="Yp0-Ih-44e" firstAttribute="trailing" secondItem="2UU-Wk-q80" secondAttribute="trailing" constant="42" id="ZHa-hC-jcj"/>
@@ -198,7 +194,7 @@
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="384.375"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--⚡️QuickMessage-->
         <scene sceneID="AIY-zI-Le3">
             <objects>
                 <viewController id="Cai-Rp-Hr2" customClass="ChatViewController" customModule="QuickMessage" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +228,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GZp-js-0fZ"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RLj-jW-F2e" firstAttribute="leading" secondItem="GZp-js-0fZ" secondAttribute="leading" id="43T-Qc-cje"/>
                             <constraint firstItem="cEn-Pa-nqR" firstAttribute="leading" secondItem="GZp-js-0fZ" secondAttribute="leading" constant="20" id="5OC-rl-Mdq"/>
@@ -245,7 +241,7 @@
                             <constraint firstItem="RLj-jW-F2e" firstAttribute="trailing" secondItem="GZp-js-0fZ" secondAttribute="trailing" id="ovv-F4-BWK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xMb-2Z-c6B">
+                    <navigationItem key="navigationItem" title="⚡️QuickMessage" id="xMb-2Z-c6B">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="G2P-67-7S2">
                             <connections>
                                 <action selector="logOutPressed:" destination="Cai-Rp-Hr2" id="I3e-gg-lL3"/>
@@ -269,6 +265,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kov-vK-0Aq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
