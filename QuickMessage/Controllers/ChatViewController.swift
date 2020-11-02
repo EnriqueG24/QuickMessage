@@ -25,7 +25,9 @@ class ChatViewController: UIViewController {
                 if error != nil {
                     print(error)
                 } else  {
-                    print("Successfully saved data.")
+                    DispatchQueue.main.async {
+                        self.messageTextField.text = ""
+                    }
                 }
             }
         }
@@ -69,6 +71,8 @@ class ChatViewController: UIViewController {
                             // This ensures our tableView is updated on the main thread
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -85,8 +89,25 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label.text = messages[indexPath.row].body
+        cell.label.text = message.body
+        
+        // This is a message from the current user
+        if message.sender == Auth.auth().currentUser?.email {
+            // Hide the left image and show the right one, assign it a color to differentiate
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor.purple
+            cell.label.textColor = UIColor.white
+        } else {
+            // otherwise if it's not the current user, hide the right image and show the left one and assign it a different color.
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor.blue
+            cell.label.textColor = UIColor.white
+        }
+        
         return cell
     }
 }
