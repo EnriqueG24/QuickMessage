@@ -19,18 +19,15 @@ class RegisterViewController: UIViewController {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
                 if let error = error {
+                    // If there is an error we'll print present an alert to the user describing what the error is
                     let alert = UIAlertController(title: "Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true)
                 } else {
+                    // otherwise if there were no errors upon registering, we can safely proceed to our chatviewcontroller. 
                     self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
                 }
             }
         }
-    }
-    
-    // MARK: - View LifeCycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 }

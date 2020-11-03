@@ -18,17 +18,16 @@ class LoginViewController: UIViewController {
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-                if error != nil {
-                    print(error?.localizedDescription)
+                if let error = error {
+                    // If there is an error we'll print present an alert to the user describing what the error is
+                    let alert = UIAlertController(title: "Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true)
                 } else {
+                    // otherwise we're safe to segue into the chatviewcontroller if the login was error free
                     self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
                 }
             }
         }
-    }
-    
-    // MARK: - View LifeCycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 }
