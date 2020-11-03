@@ -1,4 +1,5 @@
 # QuickMessage
+<img width="1000" height="400" src="ChatMessageScreenshot.png">
 QuickMessage is a powerful messaging app so you can communicate with your friends, family, coworkers, etc, from anywhere you are.
 
 # Usage
